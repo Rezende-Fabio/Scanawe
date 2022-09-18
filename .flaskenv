@@ -1,0 +1,2 @@
+FLASK_APP=scanawe.py
+FLASK_ENV=development
