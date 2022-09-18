@@ -1,0 +1,25 @@
+html{
+    background-color: aqua;
+}
+
+.container-form{
+    background-color: rgb(255, 255, 255);
+    float: right;
+    width: 490px;
+    height: 730px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 10px;
+}
+
+.input-container{
+    margin-left: 120px;
+    border-radius: 5px;
+}
+
+.btn-enter{
+    background-color: aqua;
+    border-radius: 5px;
+    margin-left: 150px;
+    padding: auto;
+    margin-top: 25px;;
+}
