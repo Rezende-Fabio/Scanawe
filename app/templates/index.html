@@ -12,15 +12,31 @@
 {% block conteudo %}
 <body>
     <section class="sec1">
+        <div class="container">
+            <img src="{{ url_for('static', filename='img/scanawe1.png') }}" class="img">
+            <img src="{{ url_for('static', filename='img/Frame 45.png') }}" class="img1">
+        </div>
         <form action="/autenticar" method="POST">
             <div class="container-form">
-                <h3>Login</h3><br><br><br><br>
-                <input type="text" name="user" class="input-container"><br><br>
-                <input type="password" name="senha" class="input-container"><br>
+                <h3 class="login">Login</h3>
+                <input type="text" name="user" class="input-container" placeholder="Usuário"><br><br>
+                <input type="password" name="senha" class="input-container" placeholder="Senha"><br><br>
                 <button type="submit" class="btn-enter">Entrar</button>
             </div>
         </form>
     </section>
+    {% if aviso %}
+    <section class="modal">
+        <div id="card">
+            <h2>Aviso!</h2>
+            <hr>
+            <p>Usuário/Senha está Incorreto!</p>
+            <div id="btns">
+                <a class="btn-ok" href="/">Cancelar</a>
+            </div>
+        </div>
+    </section> 
+    {% endif %}
 </body>
 {% endblock %}
 </html>

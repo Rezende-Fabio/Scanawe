@@ -13,5 +13,5 @@ def autenticar():
     if usuario == "admin" and senha == "admin":
         return render_template("menu.html")
     else:
-        return "Senha errada"
+        return render_template("index.html", aviso=True)
 

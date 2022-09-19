@@ -1,25 +1,118 @@
 html{
-    background-color: aqua;
+    background-color: #E4EDF6;
 }
 
 .container-form{
     background-color: rgb(255, 255, 255);
     float: right;
     width: 490px;
-    height: 730px;
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 10px;
+    height: 100vh;
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
 }
 
 .input-container{
-    margin-left: 120px;
+    left: 120px;
     border-radius: 5px;
+    width: 280px;
+    height: 36px;
+    background-color: #e6e8e3;
+    border: none;
+    padding: 10px;
 }
 
 .btn-enter{
-    background-color: aqua;
+    background-color: #706EC9;
+    border: none;
+    color: #fff;
     border-radius: 5px;
-    margin-left: 150px;
+    left: 120px;
     padding: auto;
-    margin-top: 25px;;
+    top: 25px;
+    width: 280px;
+    height: 36px;
+}
+
+.login{
+    margin-top: -120px;
+    margin-bottom: 160px;
+    margin-left: -260px;
+}
+
+.img{
+    width: 25%;
+    position: absolute; 
+}
+
+.img1{
+    width: 30%;
+    position: absolute;
+    bottom: 0%;
+}
+
+
+section.modal{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #00000080;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section.modal div#card{
+    width: 30rem;
+    position: relative;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+section.modal div#card h2{
+    padding: 10px;
+    margin: 0;
+}
+
+section.modal div#card hr{
+    width: 95%;
+}
+
+section.modal div#card p{
+    padding: 10px;
+    text-align: center;
+    font-size: 18.5px;
+}
+
+section.modal div#card div#btns{
+    display: flex;
+    justify-content: center;
+    padding: 0 10px 10px 10px;
+}
+
+section.modal div#card div#btns a.btn-ok{
+    background-color: #fff;
+    color: #706EC9;
+    border: solid 1px #706EC9;
+    text-align: center;
+    padding: 5px;
+    border-radius: 5px;
+    text-decoration: none;
+} 
+
+section.modal div#card div#btns a.btn-ok:hover{
+    background-color: #706EC9;
+    color: #fff;
+    border: solid 1px #706EC9;
+    text-align: center;
+    padding: 5px;
+    border-radius: 5px;
+    text-decoration: none;
 }
