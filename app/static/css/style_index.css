@@ -1,8 +1,3 @@
-html{
-    background-color: #E4EDF6;
-}
-
-/*Começo estilização do index*/
 .container-form{
     background-color: rgb(255, 255, 255);
     float: right;
@@ -117,53 +112,4 @@ section.modal div#card div#btns a.btn-ok:hover{
     border-radius: 5px;
     text-decoration: none;
 }
-/*Termino */
 
-/* Começo estilização base */
-.container-form-menu{
-    background-color: rgb(255, 255, 255);
-    float: left;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: right;
-    align-items: center;
-    border-top-right-radius: 30px;
-    border-bottom-right-radius: 30px;
-    padding: 30px;
-}
-
-.container-form-menu hr{
-    width: 95%;
-    margin: 5px;
-}
-
-.div-empresas{
-    cursor: pointer;
-}
-
-.list-empresas{
-    display: none;
-    margin-bottom: 5px;
-    font-size: 13.5px;
-}
-
-.div-relatorio{
-    cursor: pointer;
-}
-
-.list-relatorio{
-    display: none;
-    margin-bottom: 5px;
-    font-size: 13.5px;
-}
-
-.div-questionario{
-    cursor: pointer;
-}
-
-.list-questionario{
-    display: none;
-    margin-bottom: 5px;
-    font-size: 13.5px;
-}

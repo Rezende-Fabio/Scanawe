@@ -1,0 +1,62 @@
+.container-form-menu{
+    background-color: rgb(255, 255, 255);
+    float: left;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+    align-items: center;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    padding: 30px;
+}
+
+.container-form-menu hr{
+    width: 95%;
+    margin: 5px;
+}
+
+.div-empresas{
+    cursor: pointer;
+}
+
+.list-empresas{
+    display: none;
+    margin-bottom: 5px;
+    font-size: 13.5px;
+}
+
+.div-relatorio{
+    cursor: pointer;
+}
+
+.list-relatorio{
+    display: none;
+    margin-bottom: 5px;
+    font-size: 13.5px;
+}
+
+.div-questionario{
+    cursor: pointer;
+}
+
+.list-questionario{
+    display: none;
+    margin-bottom: 5px;
+    font-size: 13.5px;
+}
+
+/* Começo estilização menu Consultor */
+.data{
+    display: flex;
+    left: 300px;
+    top: 200px;
+    position: absolute;
+    background-color: #fff;
+    border-radius: 15px;
+    width: auto;
+    height: auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
