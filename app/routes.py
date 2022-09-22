@@ -14,4 +14,3 @@ def autenticar():
         return render_template("menu.html")
     else:
         return render_template("index.html", aviso=True)
-

@@ -1,5 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+@import 'colors.css';
+
 .container-form-menu{
-    background-color: rgb(255, 255, 255);
+    background-color: var(--backgraund-conteiner);
     float: left;
     height: 100vh;
     display: flex;
@@ -52,7 +55,7 @@
     left: 300px;
     top: 200px;
     position: absolute;
-    background-color: #fff;
+    background-color: var(--backgraund-conteiner);
     border-radius: 15px;
     width: auto;
     height: auto;

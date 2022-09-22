@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+@import 'colors.css';
+
 .container-form{
-    background-color: rgb(255, 255, 255);
+    background-color: var(--backgraund-conteiner);
     float: right;
-    width: 490px;
+    width: 2vw;
     height: 100vh;
     display: flex;
     flex-direction:column;
@@ -16,15 +19,15 @@
     border-radius: 5px;
     width: 280px;
     height: 36px;
-    background-color: #e6e8e3;
+    background-color: var(--backgraund-inputs);
     border: none;
     padding: 10px;
 }
 
 .btn-enter{
-    background-color: #706EC9;
+    background-color: var(--backgraund-buttons);
     border: none;
-    color: #fff;
+    color: var(--text-color-white);
     border-radius: 5px;
     left: 120px;
     padding: auto;
@@ -67,7 +70,7 @@ section.modal{
 section.modal div#card{
     width: 30rem;
     position: relative;
-    background-color: #fff;
+    background-color: var(--backgraund-conteiner);
     border-radius: 10px;
     padding: 20px;
 }
@@ -94,9 +97,9 @@ section.modal div#card div#btns{
 }
 
 section.modal div#card div#btns a.btn-ok{
-    background-color: #fff;
-    color: #706EC9;
-    border: solid 1px #706EC9;
+    background-color: var(--backgraund-conteiner);
+    color: var(--backgraund-buttons);
+    border: solid 1px var(--backgraund-buttons);
     text-align: center;
     padding: 5px;
     border-radius: 5px;
@@ -104,9 +107,9 @@ section.modal div#card div#btns a.btn-ok{
 } 
 
 section.modal div#card div#btns a.btn-ok:hover{
-    background-color: #706EC9;
-    color: #fff;
-    border: solid 1px #706EC9;
+    background-color: var(--backgraund-buttons);
+    color: var(--text-color-white);
+    border: solid 1px var(--backgraund-buttons);
     text-align: center;
     padding: 5px;
     border-radius: 5px;
