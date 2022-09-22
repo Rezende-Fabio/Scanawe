@@ -31,8 +31,11 @@
 
             $('div.div-questionario').click(function(){
                 $(this).siblings("a.list-questionario").slideToggle();
+                var $element = $(this).parent();
+                var $elementFind = $element.find("h3");
+                console.log($this.text());
                 if($(this).text() == "Questionário ∨"){
-                    $(this).text("Questionário ∧");
+                    $(this).siblings("h3").text("Questionário ∧");
                 }else{
                     $(this).text("Questionário ∨");
                 }
@@ -49,11 +52,11 @@
             <aside>
                 <div class="topo">
                     <div class="logo">
-
+                        <img src="{{ url_for('static', filename='img/scanawe2.png') }}">
                     </div>
                 </div>
                 <div class="sidebar">
-                    <a href="">
+                    <a href="" class="active">
                         <span class="material-symbols-outlined">dashboard</span>
                         <h3>Dashboard</h3>
                     </a>
@@ -65,24 +68,30 @@
                     <hr>
                     <div class="div-empresas">
                         <span class="material-symbols-outlined">apartment</span>
-                        <h3>Empresas ∨</h3>
+                        <h3>Empresas</h3>
+                        <span class="material-symbols-outlined" id="icons">arrow_drop_down</span>
+                        <div class="div">
+                            <a class="list-empresas" href="">Lista de empresas</a>
+                            <a class="list-empresas" href="">Cadastrar empresa</a>
+                        </div>   
                     </div>
-                    <a class="list-empresas" href="">Lista de empresas</a>
-                    <a class="list-empresas" href="">Cadastrar empresa</a>
                     <hr>
                     <div class="div-relatorio">
                         <span class="material-symbols-outlined">insights</span>
-                        <h3>Relatório ∨</h3>
+                        <h3>Relatório</h3>
+                        <span class="material-symbols-outlined" id="icons">arrow_drop_down</span>
                     </div>
                     <a class="list-relatorio" href="">Lista de relatórios</a>
                     <a class="list-relatorio" href="">Gerar relatório</a>
                     <hr>
                     <div class="div-questionario">
-                        <h3>Questionário ∨</h3>
+                        <span class="material-symbols-outlined">insights</span>
+                        <h3>Questionário</h3>
+                        <span class="material-symbols-outlined" id="icons">arrow_drop_down</span>
                     </div> 
                     <a class="list-questionario" href="">Lista de questionários</a>
                     <a class="list-questionario" href="">Cadastrar questionário</a>
-                    <a href="">
+                    <a href="/" class="sair">
                         <span class="material-symbols-outlined">logout</span>
                         <h3>Sair</h3>
                     </a>

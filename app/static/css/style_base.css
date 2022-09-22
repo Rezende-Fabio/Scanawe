@@ -1,32 +1,182 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 @import 'colors.css';
 
-.container-form-menu{
-    background-color: var(--backgraund-conteiner);
-    float: left;
-    height: 100vh;
+aside a{
+    color: var(--text-color-gray);
     display: flex;
-    flex-direction: column;
-    justify-content: right;
-    align-items: center;
+    margin: 0.6rem;
+    gap: 0.2rem;
+    margin-left: 0.4rem;
+    position: relative;
+    transition: all 300ms ease;
+}
+
+aside .sidebar a.active{
+    color: var(--backgraund-buttons);
+    margin-left: 0;
+}
+
+aside .sidebar a span{
+    font-size: 1.5rem;
+    transition: all 300ms ease;
+}
+
+aside .sidebar a.active:before{
+    content: '';
+    width: 6px;
+    height: 100%;
+}
+
+aside .sidebar a:hover{
+    color: var(--backgraund-buttons);
+    text-decoration: none;
+}
+
+aside .sidebar a:hover span{
+    margin-left: 1rem;
+}
+
+aside{
+    background-color: var(--backgraund-cotainer);
+    height: 100vh;
+    width: 3vw;
     border-top-right-radius: 30px;
     border-bottom-right-radius: 30px;
-    padding: 30px;
+    transition: all 300ms ease;
+}
+
+aside .topo{
+    background-color: var(--backgraund-cotainer);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1.4rem;
+    margin-bottom: 1.4rem;
+}
+
+aside .topo .logo img{
+    width: 3rem;
+    height: 1rem;
+    transition: all 300ms ease;
+}
+
+aside h3{
+    font-size: 1.2rem;
+    transition: all 300ms ease;
+}
+
+aside .sidebar{
+    background-color: var(--backgraund-cotainer);
+    display: flex;
+    flex-direction: column;
+    height: 86vh;
+    position: relative;
+}
+
+aside .sidebar div{
+    color: var(--text-color-gray);
+    display: flex;
+    margin: 0.5rem;
+    gap: 0.2rem;
+    margin-left: 0.01rem;
+    position: relative;
+    transition: all 300ms ease;
+}
+
+aside .sidebar div span{
+    font-size: 1.5rem;
+    transition: all 300ms ease;
+}
+
+aside .sidebar div:before{
+    content: '';
+    width: 6px;
+    height: 100%;
+}
+
+aside .sidebar div:hover{
+    color: var(--backgraund-buttons);
+}
+
+aside .sidebar div:hover span{
+    margin-left: 1rem;
+}
+
+aside .sair{
+    position: absolute;
+    bottom: 0.5rem;
+    width: 100%;
+}
+
+aside:hover{
+    width: 15vw;
+}
+
+aside:hover .sidebar a h3{
+    display: block;
+}
+
+aside:hover .sidebar div h3{
+    display: block;
+}
+
+aside:hover .topo .logo img{
+    width: 10rem;
+    height: 3rem;
+}
+
+aside:hover #icons{
+    display: block;
+}
+
+aside .sidebar a h3{
+    display: none;
+}
+
+aside .sidebar div h3{
+    display: none;
+}
+
+#icons{
+    display: none;
+}
+
+.container-form-menu{
+    background-color: var(--backgraund-html);
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    margin: 0;
+    grid-template-columns: auto auto 20rem;
 }
 
 .container-form-menu hr{
-    width: 95%;
-    margin: 5px;
+    width: 80%;
+    margin: 0.2rem;
 }
 
 .div-empresas{
     cursor: pointer;
+    display: block;
+    flex-wrap: wrap;
+    transition: all 300ms ease;
+}
+
+.div-empresas:hover .list-empresas{
+    display: block;
+}
+
+.div{
+    top: 0.5rem;
+    flex-direction: column;
+    margin-bottom: 0;
+    position: relative;
 }
 
 .list-empresas{
+    flex-direction: column;
     display: none;
     margin-bottom: 5px;
-    font-size: 13.5px;
 }
 
 .div-relatorio{
@@ -49,17 +199,8 @@
     font-size: 13.5px;
 }
 
-/* Começo estilização menu Consultor */
-.data{
-    display: flex;
-    left: 300px;
-    top: 200px;
-    position: absolute;
-    background-color: var(--backgraund-conteiner);
-    border-radius: 15px;
-    width: auto;
-    height: auto;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.logo-icon{
+    display: block;
+    width: 100%;
 }
+
