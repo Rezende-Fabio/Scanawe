@@ -14,7 +14,7 @@
 .container{
     background-color: var(--backgraund-cotainer);
     width: 100;
-    height: 65vh;
+    height: 58vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -48,17 +48,16 @@
 }
 
 .login{
-    align-items: left;
+    align-items: center;
     margin-bottom: 4rem;
 }
 
 .topo-index{
-    background-color: var(--backgraund-cotainer);
+    background-color: var(--backgraund-html);
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 1.4rem;
-    margin-bottom: 1.8rem;
+    margin-top: 0;
 }
 
 .logo-index{
@@ -71,8 +70,8 @@
 .logo-index img{
     align-items: center;
     justify-content: center;
-    width: 12rem;
-    height: 5rem;
+    width: 20rem;
+    height: 8rem;
 }
 
 .container-form a{
@@ -146,3 +145,91 @@ section.modal div#card div#btns a.btn-ok:hover{
     text-decoration: none;
 }
 
+section.modal-form{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #00000080;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section.modal-form div#card-form{
+    width: 30rem;
+    height: 24rem;;
+    position: relative;
+    background-color: var(--backgraund-cotainer);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+section.modal-form div#card-form h2{
+    padding: 10px;
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+section.modal-form div#card-form hr{
+    width: 95%;
+}
+
+section.modal-form div#card-form div#inputs{
+    padding: 1.5rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 25px 10px 10px 10px;   
+}
+
+section.modal-form div#card-form div#inputs input{
+    background-color: var(--backgraund-inputs);
+    border-radius: 5px;
+    padding: 5px;
+    margin-bottom: 0.5rem;
+}
+
+section.modal-form div#card-form div#btns{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px 10px 10px 10px;
+}
+
+section.modal-form div#card-form div#btns a.btn-cancelar{
+    background-color: red;
+    padding: 5px;
+    margin-right: 16rem;
+    color: var(--text-color-white);
+    border-radius: 5px;
+    border: 2px solid red;
+}
+
+section.modal-form div#card-form div#btns a.btn-cancelar:hover{
+    background-color: var(--text-color-white);
+    padding: 5px;
+    margin-right: 16rem;
+    color: red;
+    border-radius: 5px;
+    border: 2px solid red;
+    text-decoration: none;
+}
+
+section.modal-form div#card-form div#btns button.btn-enviar{
+    background-color: green;
+    padding: 5px;
+    color: var(--text-color-white);
+    border-radius: 5px;
+    border: 2px solid green;
+}
+
+section.modal-form div#card-form div#btns button.btn-enviar:hover{
+    background-color: var(--text-color-white);
+    padding: 5px;
+    color: green;
+    border-radius: 5px;
+    border: 2px solid green;
+}
