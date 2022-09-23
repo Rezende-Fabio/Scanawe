@@ -12,18 +12,22 @@
 {% block conteudo %}
 <body>
     <section>
-        <div class="container">
-            <img src="{{ url_for('static', filename='img/scanawe1.png') }}" class="img">
-            <img src="{{ url_for('static', filename='img/Frame 45.png') }}" class="img1">
+        <div class="container-form">
+            <form action="/autenticar" method="POST">
+                <div class="container">
+                    <div class="topo-index">
+                        <div class="logo-index">
+                            <img src="{{ url_for('static', filename='img/scanawe1.png') }}">
+                        </div>
+                    </div>
+                    <h3 class="login">Login</h3>
+                    <input type="text" name="user" class="input-container" autocomplete="off" placeholder="Usuário" tabindex="1"><br><br>
+                    <input type="password" name="senha" class="input-container" autocomplete="off" placeholder="Senha" tabindex="2"><br><br>
+                    <button type="submit" class="btn-enter">Entrar</button>
+                    <a href="">Esqueceu a senha ?</a>
+                </div>
+            </form>
         </div>
-        <form action="/autenticar" method="POST">
-            <div class="container-form">
-                <h3 class="login">Login</h3>
-                <input type="text" name="user" class="input-container" autocomplete="off" placeholder="Usuário" tabindex="1"><br><br>
-                <input type="password" name="senha" class="input-container" autocomplete="off" placeholder="Senha" tabindex="2"><br><br>
-                <button type="submit" class="btn-enter">Entrar</button>
-            </div>
-        </form>
     </section>
     {% if aviso %}
     <section class="modal">

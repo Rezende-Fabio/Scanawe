@@ -56,12 +56,12 @@
                     </div>
                 </div>
                 <div class="sidebar">
-                    <a href="" class="active">
+                    <a href="/dashboard" class="active">
                         <span class="material-symbols-outlined">dashboard</span>
                         <h3>Dashboard</h3>
                     </a>
                     <hr>
-                    <a href="">
+                    <a href="/token">
                         <span class="material-symbols-outlined">token</span>
                         <h3>Gerar Token</h3>
                     </a>
@@ -71,8 +71,8 @@
                         <h3>Empresas</h3>
                         <span class="material-symbols-outlined" id="icons">arrow_drop_down</span>
                         <div class="div">
-                            <a class="list-empresas" href="">Lista de empresas</a>
-                            <a class="list-empresas" href="">Cadastrar empresa</a>
+                            <a class="list-empresas" href="/lista-empresas">Lista de empresas</a>
+                            <a class="list-empresas" href="/cadastrar-empresa">Cadastrar empresa</a>
                         </div>   
                     </div>
                     <hr>
@@ -81,26 +81,28 @@
                         <h3>Relatório</h3>
                         <span class="material-symbols-outlined" id="icons">arrow_drop_down</span>
                     </div>
-                    <a class="list-relatorio" href="">Lista de relatórios</a>
-                    <a class="list-relatorio" href="">Gerar relatório</a>
+                    <a class="list-relatorio" href="/lista-relatorios">Lista de relatórios</a>
+                    <a class="list-relatorio" href="/cadastrar-relatorio">Gerar relatório</a>
                     <hr>
                     <div class="div-questionario">
                         <span class="material-symbols-outlined">insights</span>
                         <h3>Questionário</h3>
                         <span class="material-symbols-outlined" id="icons">arrow_drop_down</span>
                     </div> 
-                    <a class="list-questionario" href="">Lista de questionários</a>
-                    <a class="list-questionario" href="">Cadastrar questionário</a>
+                    <a class="list-questionario" href="/lista-questionarios">Lista de questionários</a>
+                    <a class="list-questionario" href="/cadastrar-questionario">Cadastrar questionário</a>
                     <a href="/" class="sair">
                         <span class="material-symbols-outlined">logout</span>
                         <h3>Sair</h3>
                     </a>
                 </div>
             </aside>
+        
+            {% block conteudo %}
+
+            {% endblock %}
         </div>
     </section>
-    {% block conteudo %}
-    {% endblock %}
     <script src="{{ url_for('static', filename='plugins/bootstrap/js/bootstrap.min.js') }}"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 
