@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Symbols+Outlined">
     <link rel="icon" href="{{ url_for('static', filename='img/scanawe1.png') }}">
 
-    
     <script>
         $(function(){
             $('div.div-empresas').click(function(){
@@ -33,13 +32,19 @@
 
             $('div.div-questionario').click(function(){
                 $(this).siblings("a.list-questionario").slideToggle();
-                var $element = $(this).parent();
-                var $elementFind = $element.find("h3");
-                console.log($this.text());
-                if($(this).text() == "Questionário ∨"){
-                    $(this).siblings("h3").text("Questionário ∧");
+                var $elementoPai = $(this).parent();
+                var $elemento = $elementoPai.find('[id="icons"]');
+                console.log($elemento.html());
+                if($elemento.html() == "arrow_drop_down"){
+                    $(this).html("");
+                    $(this).append('<span class="material-symbols-outlined">insights</span>');
+                    $(this).append('<h3>Questionário</h3>');
+                    $(this).append('<span class="material-symbols-outlined" id="icons">arrow_drop_up</span>');
                 }else{
-                    $(this).text("Questionário ∨");
+                    $(this).html("");
+                    $(this).append('<span class="material-symbols-outlined">insights</span>');
+                    $(this).append('<h3>Questionário</h3>');
+                    $(this).append('<span class="material-symbols-outlined" id="icons">arrow_drop_down</span>');
                 }
             });
 
@@ -71,12 +76,10 @@
                     <div class="div-empresas">
                         <span class="material-symbols-outlined">apartment</span>
                         <h3>Empresas</h3>
-                        <span class="material-symbols-outlined" id="icons">arrow_drop_down</span>
-                        <div class="div">
-                            <a class="list-empresas" href="/lista-empresas">Lista de empresas</a>
-                            <a class="list-empresas" href="/cadastrar-empresa">Cadastrar empresa</a>
-                        </div>   
+                        <span class="material-symbols-outlined" id="icons">arrow_drop_down</span>  
                     </div>
+                    <a class="list-empresas" href="/lista-empresas">Lista de empresas</a>
+                    <a class="list-empresas" href="/cadastrar-empresa">Cadastrar empresa</a>
                     <hr>
                     <div class="div-relatorio">
                         <span class="material-symbols-outlined">insights</span>
