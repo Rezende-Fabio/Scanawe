@@ -10,6 +10,67 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Symbols+Outlined">
     <link rel="icon" href="{{ url_for('static', filename='img/scanawe1.png') }}">
 
+    <title>Scanawe</title>
+</head>
+<body>
+    <section>
+        <div class="container-form-menu">
+            <aside>
+                <div class="topo">
+                    <div class="logo">
+                        <img src="{{ url_for('static', filename='img/scanawe2.png') }}">
+                    </div>
+                </div>
+                <div class="sidebar">
+                    <a href="/dashboard" class="active">
+                        <span class="material-symbols-outlined">dashboard</span>
+                        <h3>Dashboard</h3>
+                    </a>
+                    <hr>
+                    <a href="/token">
+                        <span class="material-symbols-outlined">token</span>
+                        <h3>Gerar Token</h3>
+                    </a>
+                    <hr>
+                    <div class="div-empresas">
+                        <span class="material-symbols-outlined">apartment</span>
+                        <h3>Empresas</h3>
+                        <span class="material-symbols-outlined" id="icons">arrow_drop_down</span>  
+                    </div>
+                    <a class="list-empresas" href="/lista-empresas">Lista de empresas</a>
+                    <a class="list-empresas" href="/cadastrar-empresa">Cadastrar empresa</a>
+                    <hr>
+                    <div class="div-relatorio">
+                        <div id="componentes">
+                            <span class="material-symbols-outlined">insights</span>
+                            <h3>Relatório</h3>
+                            <span class="material-symbols-outlined" id="icons">arrow_drop_down</span>
+                        </div>
+                    </div>
+                    <a class="list-relatorio" href="/lista-relatorios">Lista de relatórios</a>
+                    <a class="list-relatorio" href="/cadastrar-relatorio">Gerar relatório</a>
+                    <hr>
+                    <div class="div-questionario">
+                        <span class="material-symbols-outlined">insights</span>
+                        <h3>Questionário</h3>
+                        <span class="material-symbols-outlined" id="icons">arrow_drop_down</span>
+                    </div> 
+                    <a class="list-questionario" href="/lista-questionarios">Lista de questionários</a>
+                    <a class="list-questionario" href="/cadastrar-questionario">Cadastrar questionário</a>
+                    <a href="/" class="sair">
+                        <span class="material-symbols-outlined">logout</span>
+                        <h3>Sair</h3>
+                    </a>
+                </div>
+            </aside>
+        
+            {% block conteudo %}
+
+            {% endblock %}
+        </div>
+    </section>
+    <script src="{{ url_for('static', filename='plugins/bootstrap/js/bootstrap.min.js') }}"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script>
         $(function(){
             $('div.div-empresas').click(function(){
@@ -50,66 +111,6 @@
 
         });
     </script>
-
-    <title>Scanawe</title>
-</head>
-<body>
-    <section>
-        <div class="container-form-menu">
-            <aside>
-                <div class="topo">
-                    <div class="logo">
-                        <img src="{{ url_for('static', filename='img/scanawe2.png') }}">
-                    </div>
-                </div>
-                <div class="sidebar">
-                    <a href="/dashboard" class="active">
-                        <span class="material-symbols-outlined">dashboard</span>
-                        <h3>Dashboard</h3>
-                    </a>
-                    <hr>
-                    <a href="/token">
-                        <span class="material-symbols-outlined">token</span>
-                        <h3>Gerar Token</h3>
-                    </a>
-                    <hr>
-                    <div class="div-empresas">
-                        <span class="material-symbols-outlined">apartment</span>
-                        <h3>Empresas</h3>
-                        <span class="material-symbols-outlined" id="icons">arrow_drop_down</span>  
-                    </div>
-                    <a class="list-empresas" href="/lista-empresas">Lista de empresas</a>
-                    <a class="list-empresas" href="/cadastrar-empresa">Cadastrar empresa</a>
-                    <hr>
-                    <div class="div-relatorio">
-                        <span class="material-symbols-outlined">insights</span>
-                        <h3>Relatório</h3>
-                        <span class="material-symbols-outlined" id="icons">arrow_drop_down</span>
-                    </div>
-                    <a class="list-relatorio" href="/lista-relatorios">Lista de relatórios</a>
-                    <a class="list-relatorio" href="/cadastrar-relatorio">Gerar relatório</a>
-                    <hr>
-                    <div class="div-questionario">
-                        <span class="material-symbols-outlined">insights</span>
-                        <h3>Questionário</h3>
-                        <span class="material-symbols-outlined" id="icons">arrow_drop_down</span>
-                    </div> 
-                    <a class="list-questionario" href="/lista-questionarios">Lista de questionários</a>
-                    <a class="list-questionario" href="/cadastrar-questionario">Cadastrar questionário</a>
-                    <a href="/" class="sair">
-                        <span class="material-symbols-outlined">logout</span>
-                        <h3>Sair</h3>
-                    </a>
-                </div>
-            </aside>
-        
-            {% block conteudo %}
-
-            {% endblock %}
-        </div>
-    </section>
-    <script src="{{ url_for('static', filename='plugins/bootstrap/js/bootstrap.min.js') }}"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 
 </body>
 </html>
