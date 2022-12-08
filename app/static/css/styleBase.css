@@ -119,6 +119,7 @@ aside .sair{
 
 aside:hover{
     width: 15vw;
+    position: absolute;
 }
 
 aside:hover .sidebar a h3{
