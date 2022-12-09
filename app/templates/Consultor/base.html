@@ -9,6 +9,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Symbols+Outlined">
     <link rel="icon" href="{{ url_for('static', filename='img/scanawe1.png') }}">
+    <script src="{{ url_for('static', filename='plugins/bootstrap/js/bootstrap.min.js') }}"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 
     <title>Scanawe</title>
 </head>
@@ -61,31 +63,47 @@
                     </a>
                 </div>
             </aside>
-        
             {% block conteudo %}
 
             {% endblock %}
         </div>
     </section>
-    <script src="{{ url_for('static', filename='plugins/bootstrap/js/bootstrap.min.js') }}"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    
     <script>
         $(function(){
             $('div.div-empresas').click(function(){
                 $(this).siblings("a.list-empresas").slideToggle();
-                if($(this).text() == "Empresas ∨"){
-                    $(this).text("Empresas ∧");
+                var $elementoPai = $(this).parent();
+                var $elemento = $elementoPai.find('[id="icons"]');
+                console.log($elemento.html());
+                if($elemento.html() == "arrow_drop_down"){
+                    $(this).html("");
+                    $(this).append('<span class="material-symbols-outlined">apartment</span>');
+                    $(this).append('<h3>Empresas</h3>');
+                    $(this).append('<span class="material-symbols-outlined" id="icons">arrow_drop_up</span>');
                 }else{
-                    $(this).text("Empresas ∨");
+                    $(this).html("");
+                    $(this).append('<span class="material-symbols-outlined">apartment</span>');
+                    $(this).append('<h3>Empresas</h3>');
+                    $(this).append('<span class="material-symbols-outlined" id="icons">arrow_drop_down</span>');
                 }
             });
 
             $('div.div-relatorio').click(function(){
                 $(this).siblings("a.list-relatorio").slideToggle();
-                if($(this).text() == "Relatório ∨"){
-                    $(this).text("Relatório ∧");
+                var $elementoPai = $(this).parent();
+                var $elemento = $elementoPai.find('[id="icons"]');
+                console.log($elemento.html());
+                if($elemento.html() == "arrow_drop_down"){
+                    $(this).html("");
+                    $(this).append('<span class="material-symbols-outlined">insights</span>');
+                    $(this).append('<h3>Relatório</h3>');
+                    $(this).append('<span class="material-symbols-outlined" id="icons">arrow_drop_up</span>');
                 }else{
-                    $(this).text("Relatório ∨");
+                    $(this).html("");
+                    $(this).append('<span class="material-symbols-outlined">insights</span>');
+                    $(this).append('<h3>Relatório</h3>');
+                    $(this).append('<span class="material-symbols-outlined" id="icons">arrow_drop_down</span>');
                 }
             });
 
