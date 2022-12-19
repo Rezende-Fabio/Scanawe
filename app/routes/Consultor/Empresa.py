@@ -1,11 +1,11 @@
 from app import app
 from flask import render_template, request
 
-@app.route("/lista-empresas")
+@app.route("/empresa/lista-empresas")
 def listaEmpresas():
-    return render_template("Consultor/listaEmpresas.html")
+    return render_template("Consultor/listaEmpresas.html", titulo="Listagem de Empresas")
 
 
-@app.route("/cadastrar-empresa")
+@app.route("/empresa/cadastrar-empresa")
 def cadastrarEmpresa():
-    return render_template("Consultor/cadastrarEmpresa.html")
+    return render_template("Consultor/cadastrarEmpresa.html", titulo="Cadastro de Empresas")

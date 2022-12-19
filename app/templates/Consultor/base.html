@@ -1,15 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" href="{{ url_for('static', filename='css/all.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='plugins/bootstrap/css/bootstrap.min.css') }}">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Symbols+Outlined">
     <link rel="icon" href="{{ url_for('static', filename='img/scanawe1.png') }}">
+
     <script src="{{ url_for('static', filename='plugins/bootstrap/js/bootstrap.min.js') }}"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 
     <title>Scanawe</title>
@@ -17,19 +19,19 @@
 <body>
     <section>
         <div class="container-form-menu">
-            <aside>
+            <aside id="aside">
                 <div class="topo">
                     <div class="logo">
                         <img src="{{ url_for('static', filename='img/scanawe2.png') }}">
                     </div>
                 </div>
                 <div class="sidebar">
-                    <a href="/dashboard" class="active">
+                    <a href="/dashboard" id="dashboard">
                         <span class="material-symbols-outlined">dashboard</span>
                         <h3>Dashboard</h3>
                     </a>
                     <hr>
-                    <a href="/token">
+                    <a href="/token/gerar-token">
                         <span class="material-symbols-outlined">token</span>
                         <h3>Gerar Token</h3>
                     </a>
@@ -39,24 +41,24 @@
                         <h3>Empresas</h3>
                         <span class="material-symbols-outlined" id="icons">arrow_drop_down</span>  
                     </div>
-                    <a class="list-empresas" href="/lista-empresas">Lista de empresas</a>
-                    <a class="list-empresas" href="/cadastrar-empresa">Cadastrar empresa</a>
+                    <a class="list list-empresas" href="/empresa/lista-empresas">Lista de empresas</a>
+                    <a class="list list-empresas" href="/empresa/cadastrar-empresa">Cadastrar empresa</a>
                     <hr>
                     <div class="div-relatorio">
                         <span class="material-symbols-outlined">insights</span>
                         <h3>Relatório</h3>
                         <span class="material-symbols-outlined" id="icons">arrow_drop_down</span>
                     </div>
-                    <a class="list-relatorio" href="/lista-relatorios">Lista de relatórios</a>
-                    <a class="list-relatorio" href="/cadastrar-relatorio">Gerar relatório</a>
+                    <a class="list list-relatorio" href="/relatorio/lista-relatorios">Lista de relatórios</a>
+                    <a class="list list-relatorio" href="/relatorio/cadastrar-relatorio">Gerar relatório</a>
                     <hr>
                     <div class="div-questionario">
-                        <span class="material-symbols-outlined">insights</span>
+                        <span class="material-symbols-outlined">list_alt</span>
                         <h3>Questionário</h3>
                         <span class="material-symbols-outlined" id="icons">arrow_drop_down</span>
                     </div> 
-                    <a class="list-questionario" href="/lista-questionarios">Lista de questionários</a>
-                    <a class="list-questionario" href="/cadastrar-questionario">Cadastrar questionário</a>
+                    <a class="list list-questionario" href="/questionario/lista-questionarios">Lista de questionários</a>
+                    <a class="list list-questionario" href="/questionario/cadastrar-questionario">Cadastrar questionário</a>
                     <a href="/" class="sair">
                         <span class="material-symbols-outlined">logout</span>
                         <h3>Sair</h3>
@@ -76,16 +78,16 @@
                 var $elementoPai = $(this).parent();
                 var $elemento = $elementoPai.find('[id="icons"]');
                 console.log($elemento.html());
-                if($elemento.html() == "arrow_drop_down"){
-                    $(this).html("");
-                    $(this).append('<span class="material-symbols-outlined">apartment</span>');
-                    $(this).append('<h3>Empresas</h3>');
-                    $(this).append('<span class="material-symbols-outlined" id="icons">arrow_drop_up</span>');
-                }else{
+                if($elemento.html() != "arrow_drop_down"){
                     $(this).html("");
                     $(this).append('<span class="material-symbols-outlined">apartment</span>');
                     $(this).append('<h3>Empresas</h3>');
                     $(this).append('<span class="material-symbols-outlined" id="icons">arrow_drop_down</span>');
+                }else{
+                    $(this).html("");
+                    $(this).append('<span class="material-symbols-outlined">apartment</span>');
+                    $(this).append('<h3>Empresas</h3>');
+                    $(this).append('<span class="material-symbols-outlined" id="icons">arrow_drop_up </span>');
                 }
             });
 
@@ -94,7 +96,7 @@
                 var $elementoPai = $(this).parent();
                 var $elemento = $elementoPai.find('[id="icons"]');
                 console.log($elemento.html());
-                if($elemento.html() == "arrow_drop_down"){
+                if($elemento.html() != "arrow_drop_down"){
                     $(this).html("");
                     $(this).append('<span class="material-symbols-outlined">insights</span>');
                     $(this).append('<h3>Relatório</h3>');
@@ -112,14 +114,14 @@
                 var $elementoPai = $(this).parent();
                 var $elemento = $elementoPai.find('[id="icons"]');
                 console.log($elemento.html());
-                if($elemento.html() == "arrow_drop_down"){
+                if($elemento.html() != "arrow_drop_down"){
                     $(this).html("");
-                    $(this).append('<span class="material-symbols-outlined">insights</span>');
+                    $(this).append('<span class="material-symbols-outlined">list_alt</span>');
                     $(this).append('<h3>Questionário</h3>');
                     $(this).append('<span class="material-symbols-outlined" id="icons">arrow_drop_up</span>');
                 }else{
                     $(this).html("");
-                    $(this).append('<span class="material-symbols-outlined">insights</span>');
+                    $(this).append('<span class="material-symbols-outlined">list_alt</span>');
                     $(this).append('<h3>Questionário</h3>');
                     $(this).append('<span class="material-symbols-outlined" id="icons">arrow_drop_down</span>');
                 }
@@ -127,6 +129,21 @@
 
         });
     </script>
-
+    <script>
+        const interval = setInterval(() => {
+            var width = document.getElementById("aside").clientWidth;
+            if (width < 230){
+                var list = document.getElementsByClassName("list");
+                for (var i = 0; i < list.length; i++){
+                    list[i].style.display = "none";
+                }   
+            }
+        }, 50);
+    </script>
+    <script>
+        $("#dashboard").click(function(){
+            this.addClass("active");
+        }); 
+    </script>
 </body>
 </html>

@@ -1,5 +1,5 @@
 from app import app
-from flask import render_template, request
+from flask import render_template, request, session
 
 @app.route("/")
 @app.route("/index")
@@ -12,6 +12,7 @@ def autenticar():
     usuario = request.form['user']
     senha = request.form["senha"]
     if usuario == "admin" and senha == "admin":
+        session["username"] = "Administrador"
         return render_template("Consultor/menu.html")
     else:
         return render_template("index.html", aviso=1)

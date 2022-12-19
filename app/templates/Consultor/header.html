@@ -1,0 +1,14 @@
+<link rel="stylesheet" href="{{ url_for('static', filename='css/styleHeader.css') }}">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Symbols+Outlined">
+
+<div class="header">
+    <label class="title">{{ titulo }}</label>
+    <div class="modal-user">
+        <div class="icon">
+            <span class="material-symbols-outlined">account_circle</span>
+        </div>
+        <div class="user">
+            {{ session.username }}
+        </div>
+    </div>
+  </div>

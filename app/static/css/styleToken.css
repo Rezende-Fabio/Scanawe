@@ -1,0 +1,6 @@
+.main-token{
+    display: flex;
+    margin: 2rem;
+    width: 95vw;
+    flex-direction: column;
+}

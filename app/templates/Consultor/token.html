@@ -1,9 +1,8 @@
 {% extends 'Consultor/base.html' %}
 {% block conteudo %}
 <main>
-    <div style="display: flex;margin: 2rem;width: 95vw;flex-direction: column;">
-        <h1>Gerar Token</h1>
-        <div style="display: flex;border-radius: 10px;overflow: hidden; width: 89rem; background-color:rgb(255, 255, 255); height: 38rem; align-items: center;justify-content: center;padding: 2rem;">
+    <div class="main-token">
+      {% include "Consultor/header.html" %}
             <table style="width: 70%;" class="table table-sm table-dark">
                 <thead>
                   <tr>
@@ -33,7 +32,6 @@
                   </tr>
                 </tbody>
               </table>
-        </div>
     </div>
 </main>
 {% endblock %}
