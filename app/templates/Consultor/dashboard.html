@@ -1,10 +1,172 @@
 {% extends 'Consultor/base.html' %}
 {% block conteudo %}
-<section>
-    <div style="display:grid"> 
+<main>
+    <div class="main-dashboard"> 
         {% include "Consultor/header.html" %}
-        <div style="display: flex; padding: 5rem;">
+        <div class="body-dashboard">
+            <section>
+                <div class="qtde">
+                    <div class="cards">
+                        <a href="/empresa/lista-empresas" class="card-link">
+                            <div class="empresas">
+                                <span class="material-symbols-outlined" id="icon-card">apartment</span>
+                            </div>
+                        </a>
+                        <div class="text-card">
+                            <div class="titulo-card">
+                                Empresas Cadastradas
+                            </div>
+                            <div class="valor-card-emp">
+                                {{ dados.empresas }}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cards">
+                        <a href="/relatorio/lista-relatorios" class="card-link">
+                            <div class="relatorios">
+                                <span class="material-symbols-outlined" id="icon-card">list_alt</span>
+                            </div>
+                        </a>
+                        <div class="text-card">
+                            <div class="titulo-card">
+                                Relatórios Cadastradas
+                            </div>
+                            <div class="valor-card-relat">
+                                {{ dados.relatorios }}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cards">
+                        <a href="/questionario/lista-questionarios" class="card-link">
+                            <div class="questionario">
+                                <span class="material-symbols-outlined" id="icon-card">quiz</span>
+                            </div>
+                        </a>
+                        <div class="text-card">
+                            <div class="titulo-card">
+                                Questionários Cadastradas
+                            </div>
+                            <div class="valor-card-quest">
+                                {{ dados.questionarios }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="grafico">
+                    <div>
+                        <canvas id="barra-empresa" width="1100" height="280"></canvas>
+                    </div>
+                </div>
+                <div class="historico">
+
+                </div>
+            </section>
+            <section>
+                <div class="data-questionario">
+                    <div class="text-quest">
+                        Quest1 12/2022
+                    </div>
+                    <hr>
+                    <div class="text-quest">
+                        Quest1 12/2022
+                    </div>
+                    <hr>
+                    <div class="text-quest">
+                        Quest1 12/2022
+                    </div>
+                    <hr>
+                    <div class="text-quest">
+                        Quest1 12/2022
+                    </div>
+                    <hr>
+                    <div class="text-quest">
+                        Quest1 12/2022
+                    </div>
+                    <hr>
+                    <div class="text-quest">
+                        Quest1 12/2022
+                    </div>
+                    <hr>
+                    <div class="text-quest">
+                        Quest1 12/2022
+                    </div>
+                    <hr>
+                    <div class="text-quest">
+                        Quest1 12/2022
+                    </div>
+                    <hr>
+                    <div class="text-quest">
+                        Quest1 12/2022
+                    </div>
+                    <hr>
+                    <div class="text-quest">
+                        Quest1 12/2022
+                    </div>
+                    <hr>
+                    <div class="text-quest">
+                        Quest1 12/2022
+                    </div>
+                    <hr>
+                </div>
+            </section>
         </div>
     </div>
-</section>
+</main>
+<script>
+    const ctx = document.getElementById('barra-empresa');
+
+    new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: ['Empresa 1', 'Empresa 2', 'Empresa 3', 'Empresa 4', 'Empresa 5', 'Empresa 6'],
+        datasets: [{
+          label: '# of Votes',
+          data: [12, 19, 3, 5, 2, 3],
+          backgroundColor: [
+            'rgba(255, 99, 132, 0.2)',
+            'rgba(255, 159, 64, 0.2)',
+            'rgba(255, 205, 86, 0.2)',
+            'rgba(75, 192, 192, 0.2)',
+            'rgba(54, 162, 235, 0.2)',
+            'rgba(153, 102, 255, 0.2)',
+            'rgba(201, 203, 207, 0.2)'
+        ],
+        borderColor: [
+            'rgb(255, 99, 132)',
+            'rgb(255, 159, 64)',
+            'rgb(255, 205, 86)',
+            'rgb(75, 192, 192)',
+            'rgb(54, 162, 235)',
+            'rgb(153, 102, 255)',
+            'rgb(201, 203, 207)'
+        ],
+          borderWidth: 2
+        }]
+      },
+      options: {
+        maintainAspectRatio: false,
+        responsive: false,
+        indexAxis: 'y',
+        plugins: {
+            legend: {
+                display: false,
+                position: "bottom",
+                labels: {
+                    color: 'rgb(255, 99, 132)'
+                }
+            },
+            title: {
+                display: true,
+                text: "Questionários em Andamento",
+                position: 'top',
+            },
+            tooltips : {
+                enabled : true,
+                intersect : true,
+                backgroundColor : 'rgba(41, 128, 185,0.8)'
+            }
+        },
+      }
+    });
+</script>
 {% endblock %}

@@ -1,0 +1,142 @@
+.main-dashboard{
+    display: flex;
+    width: 100%;
+    margin: 0.1rem 0 0 1.3rem;
+    flex-direction: column;
+}
+
+.body-dashboard{
+    display: flex;
+    width: 100%;
+    padding: 0.6rem;
+}
+
+.qtde{
+    display: flex;
+    width: 70rem;
+    background-color: #fff;
+    height: 5.8rem;
+    border-radius: 1rem;
+    margin-bottom: 2rem;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.grafico{
+    display: flex;
+    width: 70rem;
+    background-color: #fff;
+    height: 18rem;
+    border-radius: 1rem;
+    margin-bottom: 2rem;
+}
+
+.historico{
+    display: flex;
+    width: 70rem;
+    background-color: #fff;
+    height: 11rem;
+    border-radius: 1rem;
+}
+
+.data-questionario{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    width: 15rem;
+    height: 38rem;
+    background-color: #fff;
+    border-radius: 1rem;
+    margin-left: 3rem;
+}
+
+.cards{
+    display: flex;
+    flex-direction: row;
+}
+
+.empresas{
+    width: 4rem;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1rem;
+    margin: 1rem;
+    background-color: #2259e5;
+}
+
+.relatorios{
+    width: 4rem;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1rem;
+    margin: 1rem;
+    background-color: #f2c758;
+}
+
+.questionario{
+    width: 4rem;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1rem;
+    margin: 1rem;
+    background-color: #4fa726;
+}
+
+#icon-card{
+    font-size: 2.5rem;
+    color: #fff;
+}
+
+.text-card{
+    display: flex;
+    align-items:initial;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.titulo-card{
+    font-size: 15.5px;
+    font-weight: 500;
+    color: #3c5572;
+}
+
+.valor-card-emp{
+    font-weight: 700;
+    color: #2259e5;
+}
+
+.valor-card-relat{
+    font-weight: 700;
+    color: #f2c758;
+}
+
+.valor-card-quest{
+    font-weight: 700;
+    color: #4fa726;
+}
+
+.grafico{
+    padding: 5px;
+}
+
+.data-questionario hr{
+    width: 100%;
+}
+
+.text-quest{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 3rem;
+}
+
+.card-link:hover #icon-card{
+    font-size: 2.8rem;
+}

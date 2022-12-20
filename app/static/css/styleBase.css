@@ -11,6 +11,10 @@ aside a{
     transition: all 300ms ease;
 }
 
+aside .sidebar{
+    border-radius: 30px;
+}
+
 aside .sidebar a.active{
     color: var(--backgraund-buttons);
     margin-left: 0;
@@ -115,6 +119,7 @@ aside .sair{
     position: absolute;
     bottom: 0.5rem;
     width: 90%;
+    border-radius: 30px;
 }
 
 aside:hover{

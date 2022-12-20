@@ -13,7 +13,11 @@ def autenticar():
     senha = request.form["senha"]
     if usuario == "admin" and senha == "admin":
         session["username"] = "Administrador"
-        return render_template("Consultor/menu.html")
+        empresas = "5"
+        questionarios = "5"
+        relatorios = "2"
+        dados = {"empresas": empresas.zfill(3), "questionarios": questionarios.zfill(3), "relatorios": relatorios.zfill(3)}
+        return render_template("Consultor/dashboard.html", titulo="Dashboard", dados=dados)
     else:
         return render_template("index.html", aviso=1)
 
