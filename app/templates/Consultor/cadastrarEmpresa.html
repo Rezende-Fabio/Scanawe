@@ -1,8 +1,167 @@
 {% extends 'Consultor/base.html' %}
 {% block conteudo %}
-<section>
-    <div style="display: flex;"> 
+<main>
+    <div class="main-empresa"> 
         {% include "Consultor/header.html" %}
+        <div class="body-empresa">
+            <form action="">
+                <div class="teste">
+                    <div class="texto">
+                        <h6>Dados Gerais</h6>
+                    </div>
+                    <div class="traco">
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-5">
+                            <label for="">Razão Social</label>
+                            <input type="text" class="form-control" style="text-transform: uppercase;" name="numDoc" id="numDoc" maxlength="40" size="40" 
+                            tabindex="1" autocomplete="off" required>
+                        </div>
+                    
+                        <div class="col-5">
+                            <label for="">Nome Fantasia</label>
+                            <input type="text" class="form-control" style="text-transform: uppercase;" name="numDoc" id="numDoc" maxlength="40" size="40" 
+                            tabindex="1" autocomplete="off" required>
+                        </div>
+                        <div class="col-2">
+                            <label for="">Sigla da Empresa</label>
+                            <input type="text" class="form-control" style="text-transform: uppercase;" name="numDoc" id="numDoc" maxlength="40" size="40" 
+                            tabindex="1" autocomplete="off" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-2">
+                            <label for="">Número do CNPJ</label>
+                            <input type="text" class="form-control" style="text-transform: uppercase;" name="numDoc" id="numDoc" maxlength="40" size="40" 
+                            tabindex="1" autocomplete="off" required>
+                        </div>
+                        <div class="col-3">
+                            <label for="">Segmento Comercial</label>
+                            <input type="text" class="form-control" style="text-transform: uppercase;" name="numDoc" id="numDoc" maxlength="40" size="40" 
+                            tabindex="1" autocomplete="off" required>
+                        </div>
+                        <div class="col-4">
+                            <label for="">E-mail Corporativo</label>
+                            <input type="text" class="form-control" style="text-transform: uppercase;" name="numDoc" id="numDoc" maxlength="40" size="40" 
+                            tabindex="1" autocomplete="off" required>
+                        </div>
+                        <div class="col-3">
+                            <label for="">Telefone</label>
+                            <input type="text" class="form-control" style="text-transform: uppercase;" name="numDoc" id="numDoc" maxlength="40" size="40" 
+                            tabindex="1" autocomplete="off" required>
+                        </div>
+                    </div>
+                </div>
+                <div class="teste">
+                    <div class="texto">
+                        <h6>Endereço</h6>
+                    </div>
+                    <div class="traco">
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-3">
+                            <label for="">Cep</label>
+                            <input type="text" class="form-control" style="text-transform: uppercase;" name="numDoc" id="numDoc" maxlength="40" size="40" 
+                            tabindex="1" autocomplete="off" required>
+                        </div>
+                    
+                        <div class="col-5">
+                            <label for="">Rua</label>
+                            <input type="text" class="form-control" style="text-transform: uppercase;" name="numDoc" id="numDoc" maxlength="40" size="40" 
+                            tabindex="1" autocomplete="off" required>
+                        </div>
+                        <div class="col-1">
+                            <label for="">Número</label>
+                            <input type="text" class="form-control" style="text-transform: uppercase;" name="numDoc" id="numDoc" maxlength="40" size="40" 
+                            tabindex="1" autocomplete="off" required>
+                        </div>
+                        <div class="col-3">
+                            <label for="">Bairro</label>
+                            <input type="text" class="form-control" style="text-transform: uppercase;" name="numDoc" id="numDoc" maxlength="40" size="40" 
+                            tabindex="1" autocomplete="off" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-3">
+                            <label for="">Complemento</label>
+                            <input type="text" class="form-control" style="text-transform: uppercase;" name="numDoc" id="numDoc" maxlength="40" size="40" 
+                            tabindex="1" autocomplete="off" required>
+                        </div>
+                        <div class="col-4">
+                            <label for="">Cidade</label>
+                            <input type="text" class="form-control" style="text-transform: uppercase;" name="numDoc" id="numDoc" maxlength="40" size="40" 
+                            tabindex="1" autocomplete="off" required>
+                        </div>
+                        <div class="col-2">
+                            <label for="">Estado</label>
+                            <input type="text" class="form-control" style="text-transform: uppercase;" name="numDoc" id="numDoc" maxlength="40" size="40" 
+                            tabindex="1" autocomplete="off" required>
+                        </div>
+                        <div class="col-3">
+                            <label for="">Pais</label>
+                            <input type="text" class="form-control" style="text-transform: uppercase;" name="numDoc" id="numDoc" maxlength="40" size="40" 
+                            tabindex="1" autocomplete="off" required>
+                        </div>
+                    </div>
+                </div>
+                <div class="teste">
+                    <div class="texto">
+                        <h6>Gestor da Empresa</h6>
+                    </div>
+                    <div class="traco">
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-5">
+                            <label for="">Nome do Gestor</label>
+                            <input type="text" class="form-control" style="text-transform: uppercase;" name="numDoc" id="numDoc" maxlength="40" size="40" 
+                            tabindex="1" autocomplete="off" required>
+                        </div>
+                    
+                        <div class="col-4">
+                            <label for="">CPF</label>
+                            <input type="text" class="form-control" style="text-transform: uppercase;" name="numDoc" id="numDoc" maxlength="40" size="40" 
+                            tabindex="1" autocomplete="off" required>
+                        </div>
+                        <div class="col-3">
+                            <label for="">Telefone</label>
+                            <input type="text" class="form-control" style="text-transform: uppercase;" name="numDoc" id="numDoc" maxlength="40" size="40" 
+                            tabindex="1" autocomplete="off" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-4">
+                            <label for="">E-mail</label>
+                            <input type="text" class="form-control" style="text-transform: uppercase;" name="numDoc" id="numDoc" maxlength="40" size="40" 
+                            tabindex="1" autocomplete="off" required>
+                        </div>
+                        <div class="col-3">
+                            <label for="">Usuário</label>
+                            <input type="text" class="form-control" style="text-transform: uppercase;" name="numDoc" id="numDoc" maxlength="40" size="40" 
+                            tabindex="1" autocomplete="off" required>
+                        </div>
+                        <div class="col-2">
+                            <label for="">Senha</label>
+                            <input type="text" class="form-control" style="text-transform: uppercase;" name="numDoc" id="numDoc" maxlength="40" size="40" 
+                            tabindex="1" autocomplete="off" required>
+                        </div>
+                        <div class="col-2">
+                            <label for="">Confrima Senha</label>
+                            <input type="text" class="form-control" style="text-transform: uppercase;" name="numDoc" id="numDoc" maxlength="40" size="40" 
+                            tabindex="1" autocomplete="off" required>
+                        </div>
+                    </div>
+                </div>
+                <div class="btn-position">
+                    <input type="submit" class="btn" id="btnGravar" value="Cadastrar Empresa" tabindex="9">
+                </div>
+            </form>
+        </div>
     </div>
-</section>
+</main>
 {% endblock %}

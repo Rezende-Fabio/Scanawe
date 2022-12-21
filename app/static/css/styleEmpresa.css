@@ -1,0 +1,58 @@
+.main-empresa{
+    display: flex;
+    width: 100%;
+    margin: 0.1rem 0 0 1.3rem;
+    flex-direction: column;
+}
+
+.body-empresa{
+    display: flex;
+    width: 87rem;
+    height: 39rem;
+    background-color: #fff; 
+    border-radius: 1rem;
+    overflow-y:auto;
+}
+
+form{
+    width: 150rem;
+    margin: 2rem;
+}
+
+div.container{
+    margin: 0;
+    width: 150rem;
+    height: 11rem;
+    background-color: #eeeeee;
+}
+
+.btn-position{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    padding: 1rem;
+    justify-content: right;
+}
+
+.teste{
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin-top: 1rem;
+}
+
+.texto{
+    position: relative;
+    bottom: 0;
+    margin: 0;
+    height: 20.5px;
+}
+
+.traco{
+    width: 1.7rem;
+    height: 0.3rem;
+    background-color: #706ec9;
+    border-radius: 0.2rem;
+    margin-bottom: 1rem;
+    position: relative;
+}

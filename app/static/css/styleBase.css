@@ -51,6 +51,7 @@ aside{
     border-top-right-radius: 30px;
     border-bottom-right-radius: 30px;
     transition: all 300ms ease;
+    z-index: 9999;
 }
 
 aside .topo{
@@ -220,3 +221,16 @@ aside .sidebar div h3{
     width: 100%;
 }
 
+.btn{
+    background-color: #706ec9;
+    color: #fff;
+    font-weight: 800;
+    -moz-box-shadow: 0px 2px 2px #706ec9;
+    -webkit-box-shadow: 0px 2px 2px #706ec9;
+}
+
+.btn:hover{
+    background-color: #fff;
+    color: #706ec9;
+    border: 1px solid #706ec9;
+}
