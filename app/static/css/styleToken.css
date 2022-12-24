@@ -1,6 +1,145 @@
 .main-token{
     display: flex;
     margin: 2rem;
-    width: 95vw;
+    width: 95rem;
     flex-direction: column;
+}
+
+.header-token{
+    width: 85rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.pesquisa-token{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#pesquisa-token{
+    margin-left: 0.3rem;
+    border-radius: 0.2rem;
+    padding: 0.2rem;
+}
+
+#bnt-gerar-token{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #706ec9;
+    padding: 0.3rem 2rem 0.3rem 2rem;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    border-radius: 0.5rem;
+    text-align: center;
+}
+
+#table-token{
+    width: 85rem;
+    margin-top: 1rem;
+}
+
+tbody{
+    background-color: #fff;
+}
+
+tr:nth-child(even) {
+    background:#f6f5f5;
+}
+
+.gs-table-head{
+    background-color: #0d3463;
+    border-radius: 10px;
+    color: #fff;
+}
+
+section.modal div.card-token{
+    background-color: #fff;
+    width: 32rem;
+    height: 17rem;
+    border-radius: 1rem;
+    padding: 1rem;
+    align-items: center;
+    justify-content: center;
+}
+
+section.modal div.card-token div.text-card{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    height: 11.7rem;
+}
+
+section.modal div.card-token div.text-card span{
+    font-size: 3.5rem;
+    color: #706ec9;
+}
+
+section.modal div.card-token div.text-card p{
+    font-size: 1.4rem;
+    color: #585555;
+    padding: 1rem;
+}
+
+section.modal div.card-token div.btns{
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+
+section.modal div.card-token div.btns #btn-enviar{
+    background-color: #706ec9;
+    border: 1.5px solid #706ec9;
+    color: #fff;
+    font-weight: 500;
+    padding: 0.3rem 2rem 0.3rem 2rem;
+    border-radius: 0.5rem;
+    margin-right: 1rem;
+    text-decoration: none;
+}
+
+section.modal div.card-token div.btns #btn-enviar:hover{
+    background-color: #fff;
+    border: 1.5px solid #706ec9;
+    color: #706ec9;
+    font-weight: 500;
+    padding: 0.3rem 2rem 0.3rem 2rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+}
+
+section.modal div.card-token div.btns #btn-cancelar{
+    background-color: #fff;
+    border: 1.5px solid #706ec9;
+    color: #706ec9;
+    font-weight: 500;
+    padding: 0.3rem 2rem 0.3rem 2rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+}
+
+section.modal div.card-token div.btns #btn-cancelar:hover{
+    background-color: #706ec9;
+    border: 1.5px solid #706ec9;
+    color: #fff;
+    font-weight: 500;
+    padding: 0.3rem 2rem 0.3rem 2rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+}
+
+.teste input{
+    display: block;
+    justify-content: center;
+    border: 2px solid #000;
+    width: 1rem;
+    height: 1rem;
+}
+
+.teste input:checked{
+    background-color: #706ec9;
 }

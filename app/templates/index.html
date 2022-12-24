@@ -4,66 +4,72 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" href="{{ url_for('static', filename='css/all.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='plugins/bootstrap/css/bootstrap.min.css') }}">
     <link rel="icon" href="{{ url_for('static', filename='img/scanawe1.png') }}">
+
+    <script src="{{ url_for('static', filename='plugins/bootstrap/js/bootstrap.min.js') }}"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 
     <title>Scanawe</title>
 </head>
 {% block conteudo %}
 <body>
-    <section>
-        <div class="container-form">
-            <div class="topo-index">
-                <div class="logo-index">
-                    <img src="{{ url_for('static', filename='img/scanawe2.png') }}">
-                </div>
+    <section class="body-index">
+        <div class="topo-index">
+            <div class="logo-index">
+                <img src="{{ url_for('static', filename='img/scanawe2.png') }}">
             </div>
-            <form action="/autenticar" method="POST">
-                <div class="container">
-                    <h3 class="login">Login</h3>
-                    <input type="text" name="user" class="input-container" autocomplete="off" placeholder="Usuário" tabindex="1"><br><br>
-                    <input type="password" name="senha" class="input-container" autocomplete="off" placeholder="Senha" tabindex="2"><br><br>
+        </div>
+        <div class="modal-login">
+            <div class="container-login">
+                <h3 class="login">Login</h3>
+                <form class="form-login" action="/autenticar" method="POST">
+                    {% for message in get_flashed_messages() %}
+                        {% if message %}
+                            <script>
+                                window.setTimeout(function() {
+                                    $(".alert").fadeTo(500, 0).slideUp(500, function(){
+                                        $(this).remove(); 
+                                    });
+                                }, 5000);
+                            </script>
+                            <div class="alert alert-danger alert-dismissible fade show fadeIn second" id="alertIndex" role="alert">
+                                <h6>{{ message }}</h6>
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                    <input type="text" name="user" id="user" class="input-container" autocomplete="off" placeholder="Usuário" tabindex="1" required><br>
+                    <input type="password" name="pssd" id="pssd" class="input-container" autocomplete="off" placeholder="Senha" tabindex="2" required><br><br>
                     <button type="submit" class="btn-enter">Entrar</button>
                     <a href="/esqueci-senha">Esqueceu a senha ?</a>
-                </div>
-            </form>
-        </div>
-    </section>
-    {% if aviso == 1 %}
-    <section class="modal">
-        <div id="card">
-            <h2>Aviso!</h2>
-            <hr>
-            <p>Usuário/Senha está Incorreto!</p>
-            <div id="btns">
-                <a class="btn-ok" href="/">Cancelar</a>
+                </form>
             </div>
         </div>
-    </section> 
-    {% endif %}
+    </section>
 
     {% if aviso == 2 %}
-    <section class="modal-form">
+    <section class="modal-senha">
         <div id="card-form">
             <h2>Insira seus dados</h2>
             <hr>
             <form action="/esqueciSenha" method="POST">
                 <div id="inputs">
                     <label for="email">E-mail</label>
-                    <input id="email" name="email" type="text" placeholder="exemplo@gmail.com">
+                    <input id="email" name="email" type="text" placeholder="exemplo@gmail.com" tabindex="3">
                     <label for="usuario">Usuário</label>
-                    <input id="usuario" name="usuario" type="text" placeholder="exemplo">
+                    <input id="usuario" name="usuario" type="text" placeholder="exemplo" tabindex="4">
                 </div>
                 <div id="btns">
-                    <a href="/" class="btn-cancelar">Cancelar</a>
-                    <button type="submit" class="btn-enviar">Enviar</button>
+                    <a href="javascript:history.back()" class="btn-cancelar" tabindex="6">Cancelar</a>
+                    <button type="submit" class="btn-enviar" tabindex="5">Enviar</button>
                 </div>
             </form>
         </div>
     </section>
     {% endif %}
-    <script src="{{ url_for('static', filename='plugins/bootstrap/js/bootstrap.min.js') }}"></script>
+
 </body>
 {% endblock %}
 </html>

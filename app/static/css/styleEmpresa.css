@@ -5,6 +5,17 @@
     flex-direction: column;
 }
 
+.body-empresa::-webkit-scrollbar{
+    width: 10px;
+    border: 1px solid #eeeeee;
+    border-radius: 1rem;
+}
+
+.body-empresa::-webkit-scrollbar-thumb{
+    background-color: #706ec9;
+    border-radius: 0 0.5rem 0.5rem 0;
+}
+
 .body-empresa{
     display: flex;
     width: 87rem;
@@ -14,16 +25,18 @@
     overflow-y:auto;
 }
 
-form{
+#form-empresa{
     width: 150rem;
     margin: 2rem;
 }
 
-div.container{
+#container-empresa{
     margin: 0;
     width: 150rem;
     height: 11rem;
     background-color: #eeeeee;
+    border-radius: 0.7rem;
+    padding: 0.8rem;
 }
 
 .btn-position{
@@ -34,7 +47,7 @@ div.container{
     justify-content: right;
 }
 
-.teste{
+.titulo-container{
     display: flex;
     flex-direction: column;
     padding: 0;

@@ -1,37 +1,89 @@
 {% extends 'Consultor/base.html' %}
 {% block conteudo %}
-<main>
-    <div class="main-token">
-      {% include "Consultor/header.html" %}
-            <table style="width: 70%;" class="table table-sm table-dark">
-                <thead>
-                  <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">First</th>
-                    <th scope="col">Last</th>
-                    <th scope="col">Handle</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">2</th>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">3</th>
-                    <td colspan="2">Larry the Bird</td>
-                    <td>@twitter</td>
-                  </tr>
-                </tbody>
-              </table>
-    </div>
-</main>
+    <script type="text/javascript" src="{{ url_for('static', filename='plugins/pagination/data.js') }}"></script>
+    <main>
+        <div class="main-token">
+            {% include "Consultor/header.html" %}
+            <div class="header-token">
+                <div class="pesquisa-token">
+                    <label for="pesquisa-token">Empresas:</label>
+                    <input type="text" placeholder="Pesquisar ..." id="pesquisa-token">
+                </div>
+                <div>
+                    <a href="/token/gerar-token-modal" id="bnt-gerar-token">Gerar Token</a>
+                </div>
+            </div>
+            <div class="body-token">
+                <div class="page-container">
+                    <div id="table-token"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    {% if aviso == 1 %}
+        <section class="modal">
+            <div class="card-token">
+                <div class="text-card">
+                    <span class="material-symbols-outlined">warning</span>
+                    <p>Tem certeza que deseja enviar Token?</p>
+                </div>
+                <div class="btns">
+                    <a href="" id="btn-enviar">Enviar</a>
+                    <a href="javascript:history.back()" id="btn-cancelar" >Cancelar</a>
+                </div>
+            </div>
+        </section>
+    {% endif %}
+
+    <script>
+        var table = $('#table-token').tableSortable({
+            data: data,
+            columns: columns,
+            searchField: '#pesquisa-token',
+            responsive: {
+                1100: {
+                    columns: {
+                        formCode: 'Form Code',
+                        formName: 'Form Name',
+                    },
+                },
+            },
+            rowsPerPage: 8,
+            pagination: true,
+            tableWillMount: function() {
+                console.log('table will mount')
+            },
+            tableDidMount: function() {
+                console.log('table did mount')
+            },
+            tableWillUpdate: function() {console.log('table will update')},
+            tableDidUpdate: function() {console.log('table did update')},
+            tableWillUnmount: function() {console.log('table will unmount')},
+            tableDidUnmount: function() {console.log('table did unmount')},
+            onPaginationChange: function(nextPage, setPage) {
+                setPage(nextPage);
+            }
+        });
+
+        $('#changeRows').on('change', function() {
+            table.updateRowsPerPage(parseInt($(this).val(), 10));
+        })
+
+        $('#rerender').click(function() {
+            table.refresh(true);
+        })
+
+        $('#distory').click(function() {
+            table.distroy();
+        })
+
+        $('#refresh').click(function() {
+            table.refresh();
+        })
+
+        $('#setPage2').click(function() {
+            table.setPage(1);
+        })
+    </script>
 {% endblock %}

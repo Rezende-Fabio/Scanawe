@@ -13,8 +13,8 @@
     <script src="{{ url_for('static', filename='plugins/bootstrap/js/bootstrap.min.js') }}"></script>
     <script type="text/javascript" src="{{ url_for('static', filename='plugin/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='plugins/pagination/table-sortable.js') }}"></script>
 
     <title>Scanawe</title>
 </head>
@@ -134,7 +134,8 @@
     <script>
         const interval = setInterval(() => {
             var width = document.getElementById("aside").clientWidth;
-            if (width < 230){
+            console.log(width);
+            if (width <= 100){
                 var list = document.getElementsByClassName("list");
                 for (var i = 0; i < list.length; i++){
                     list[i].style.display = "none";

@@ -91,7 +91,7 @@ aside .sidebar div{
     color: var(--text-color-gray);
     display: flex;
     margin: 0.5rem;
-    gap: 0.2rem;
+    gap: 0.1rem;
     margin-left: 0.01rem;
     position: relative;
     transition: all 300ms ease;
@@ -233,4 +233,17 @@ aside .sidebar div h3{
     background-color: #fff;
     color: #706ec9;
     border: 1px solid #706ec9;
+}
+
+section.modal{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #00000080;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

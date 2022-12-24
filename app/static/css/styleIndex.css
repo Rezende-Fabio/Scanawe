@@ -1,63 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 @import 'colors.css';
 
-.container-form{
+.body-index{
     background-color: var(--backgraund-html);
     width: 100%;
-    height: 100vh;
-    display: grid;
-    margin: 0;
-    align-items: center;
-    justify-content: center;
-}
-
-.container{
-    background-color: var(--backgraund-cotainer);
-    width: 100;
-    height: 58vh;
+    height: 100%;
     display: flex;
     flex-direction: column;
+    align-items: center;
     justify-content: center;
-    align-items: center;
-    border-radius: 10px;
-}
-
-.input-container{
-    left: 120px;
-    border-radius: 5px;
-    width: 280px;
-    height: 36px;
-    background-color: var(--backgraund-inputs);
-    border: none;
-    padding: 10px;
-    margin-left: 2rem;
-    margin-right: 2rem;
-}
-
-.btn-enter{
-    background-color: var(--backgraund-buttons);
-    border: none;
-    color: var(--text-color-white);
-    border-radius: 5px;
-    left: 120px;
-    padding: auto;
-    top: 25px;
-    width: 280px;
-    height: 36px;
-    margin-bottom: 0.9rem;
-}
-
-.login{
-    align-items: center;
-    margin-bottom: 4rem;
 }
 
 .topo-index{
     background-color: var(--backgraund-html);
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: initial;
+    justify-content: right;
     margin-top: 0;
+    margin-bottom: 5rem;
+    position: relative;
 }
 
 .logo-index{
@@ -74,132 +35,132 @@
     height: 8rem;
 }
 
-.container-form a{
+.modal-login{
+    background-color: var(--backgraund-cotainer);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25rem;
+    height: 25rem;
+    position: relative;
+    border-radius: 0.7rem;
+    padding: 1.5rem;
+    -webkit-box-shadow: 9px 7px 5px rgba(50, 50, 50, 0.77);
+	-moz-box-shadow:    9px 7px 5px rgba(50, 50, 50, 0.77);
+}
+
+.container-login{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.input-container{
+    left: 120px;
+    border-radius: 5px;
+    width: 280px;
+    height: 36px;
+    background-color: var(--backgraund-inputs);
+    border: none;
+    padding: 10px;
+    text-transform: uppercase;
+}
+
+.btn-enter{
+    background-color: var(--backgraund-buttons);
+    border: none;
+    color: var(--text-color-white);
+    border-radius: 5px;
+    left: 120px;
+    padding: auto;
+    top: 25px;
+    width: 280px;
+    height: 36px;
+    margin-bottom: 0.5rem;
+}
+
+.login{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    margin: 1rem 0 2rem 0;
+}
+
+.modal-login a{
     color: var(--backgraund-buttons);
 }
 
-.container-form a:hover{
+.modal-login a:hover{
     color: var(--text-color-blue);
     text-decoration: none;
 }
 
-section.modal{
+.form-login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25rem;
+    flex-direction: column;
+}
+
+section.modal-senha{
     position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
     background-color: #00000080;
-    z-index: 1;
+    z-index: 9999;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-section.modal div#card{
-    width: 30rem;
+section.modal-senha div#card-form{
+    width: 28rem;
+    height: 24rem;
     position: relative;
     background-color: var(--backgraund-cotainer);
     border-radius: 10px;
     padding: 20px;
 }
 
-section.modal div#card h2{
-    padding: 10px;
-    margin: 0;
-}
-
-section.modal div#card hr{
-    width: 95%;
-}
-
-section.modal div#card p{
-    padding: 10px;
-    text-align: center;
-    font-size: 18.5px;
-}
-
-section.modal div#card div#btns{
-    display: flex;
-    justify-content: center;
-    padding: 0 10px 10px 10px;
-}
-
-section.modal div#card div#btns a.btn-ok{
-    background-color: var(--backgraund-conteiner);
-    color: var(--backgraund-buttons);
-    border: solid 1px var(--backgraund-buttons);
-    text-align: center;
-    padding: 5px;
-    border-radius: 5px;
-    text-decoration: none;
-} 
-
-section.modal div#card div#btns a.btn-ok:hover{
-    background-color: var(--backgraund-buttons);
-    color: var(--text-color-white);
-    border: solid 1px var(--backgraund-buttons);
-    text-align: center;
-    padding: 5px;
-    border-radius: 5px;
-    text-decoration: none;
-}
-
-section.modal-form{
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: #00000080;
-    z-index: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-section.modal-form div#card-form{
-    width: 30rem;
-    height: 24rem;;
-    position: relative;
-    background-color: var(--backgraund-cotainer);
-    border-radius: 10px;
-    padding: 20px;
-}
-
-section.modal-form div#card-form h2{
+section.modal-senha div#card-form h2{
     padding: 10px;
     margin: 0;
     font-size: 1.5rem;
 }
 
-section.modal-form div#card-form hr{
+section.modal-senha div#card-form hr{
     width: 95%;
 }
 
-section.modal-form div#card-form div#inputs{
+section.modal-senha div#card-form div#inputs{
     padding: 1.5rem;
+    width: 25rem;
     display: flex;
     justify-content: center;
     flex-direction: column;
     padding: 25px 10px 10px 10px;   
 }
 
-section.modal-form div#card-form div#inputs input{
+section.modal-senha div#card-form div#inputs input{
     background-color: var(--backgraund-inputs);
     border-radius: 5px;
     padding: 5px;
     margin-bottom: 0.5rem;
 }
 
-section.modal-form div#card-form div#btns{
+section.modal-senha div#card-form div#btns{
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 25rem;
     padding: 25px 10px 10px 10px;
 }
 
-section.modal-form div#card-form div#btns a.btn-cancelar{
+section.modal-senha div#card-form div#btns a.btn-cancelar{
     background-color: red;
     padding: 5px;
     margin-right: 16rem;
@@ -208,7 +169,7 @@ section.modal-form div#card-form div#btns a.btn-cancelar{
     border: 2px solid red;
 }
 
-section.modal-form div#card-form div#btns a.btn-cancelar:hover{
+section.modal-senha div#card-form div#btns a.btn-cancelar:hover{
     background-color: var(--text-color-white);
     padding: 5px;
     margin-right: 16rem;
@@ -218,7 +179,7 @@ section.modal-form div#card-form div#btns a.btn-cancelar:hover{
     text-decoration: none;
 }
 
-section.modal-form div#card-form div#btns button.btn-enviar{
+section.modal-senha div#card-form div#btns button.btn-enviar{
     background-color: green;
     padding: 5px;
     color: var(--text-color-white);
@@ -226,7 +187,7 @@ section.modal-form div#card-form div#btns button.btn-enviar{
     border: 2px solid green;
 }
 
-section.modal-form div#card-form div#btns button.btn-enviar:hover{
+section.modal-senha div#card-form div#btns button.btn-enviar:hover{
     background-color: var(--text-color-white);
     padding: 5px;
     color: green;
