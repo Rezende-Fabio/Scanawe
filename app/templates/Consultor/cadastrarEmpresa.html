@@ -1,172 +1,251 @@
 {% extends 'Consultor/base.html' %}
 {% block conteudo %}
-<main>
-    <div class="main-empresa"> 
-        {% include "Consultor/header.html" %}
-        <div class="body-empresa">
-            <form action="" id="form-empresa">
-                <div class="titulo-container">
-                    <div class="texto">
-                        <h6>Dados Gerais</h6>
-                    </div>
-                    <div class="traco">
-                    </div>
-                </div>
-                <div class="container" id="container-empresa">
-                    <div class="row">
-                        <div class="col-5">
-                            <label for="">Razão Social</label>
-                            <input type="text" class="form-control" style="text-transform: uppercase;" name="RazaoSocial" id="RazaoSocial" maxlength="40" size="40" 
-                            tabindex="1" autocomplete="off" required>
+    <main>
+        <div class="main-empresa"> 
+            {% include "Consultor/header.html" %}
+            <div class="body-empresa">
+                <form action="" id="form-empresa">
+                    <div class="titulo-container">
+                        <div class="texto">
+                            <h6>Dados Gerais</h6>
                         </div>
-                    
-                        <div class="col-5">
-                            <label for="">Nome Fantasia</label>
-                            <input type="text" class="form-control" style="text-transform: uppercase;" name="NomeFantasia" id="NomeFantasia" maxlength="40" size="40" 
-                            tabindex="2" autocomplete="off" required>
-                        </div>
-                        <div class="col-2">
-                            <label for="">Sigla da Empresa</label>
-                            <input type="text" class="form-control" style="text-transform: uppercase;" name="SiglaEmpresa" id="SiglaEmpresa" maxlength="40" size="40" 
-                            tabindex="3" autocomplete="off" required>
+                        <div class="traco">
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-2">
-                            <label for="">Número do CNPJ</label>
-                            <input type="text" class="form-control" style="text-transform: uppercase;" name="numCNPJ" id="numCNPJ" maxlength="40" size="40" 
-                            tabindex="4" autocomplete="off" required>
+                    <div class="container" id="container-empresa">
+                        <div class="row">
+                            <div class="col-5">
+                                <label for="">Razão Social</label>
+                                <input type="text" class="form-control" style="text-transform: uppercase;" name="RazaoSocial" id="RazaoSocial" maxlength="40" size="40" 
+                                tabindex="1" autocomplete="off" required>
+                            </div>
+                        
+                            <div class="col-5">
+                                <label for="">Nome Fantasia</label>
+                                <input type="text" class="form-control" style="text-transform: uppercase;" name="NomeFantasia" id="NomeFantasia" maxlength="40" size="40" 
+                                tabindex="2" autocomplete="off" required>
+                            </div>
+                            <div class="col-2">
+                                <label for="">Sigla da Empresa</label>
+                                <input type="text" class="form-control" style="text-transform: uppercase;" name="SiglaEmpresa" id="SiglaEmpresa" maxlength="40" size="40" 
+                                tabindex="3" autocomplete="off" required>
+                            </div>
                         </div>
-                        <div class="col-3">
-                            <label for="">Segmento Comercial</label>
-                            <input type="text" class="form-control" style="text-transform: uppercase;" name="SegComercial" id="SegComercial" maxlength="40" size="40" 
-                            tabindex="5" autocomplete="off" required>
-                        </div>
-                        <div class="col-4">
-                            <label for="">E-mail Corporativo</label>
-                            <input type="text" class="form-control" style="text-transform: uppercase;" name="emailCorp" id="emailCorp" maxlength="40" size="40" 
-                            tabindex="6" autocomplete="off" required>
-                        </div>
-                        <div class="col-3">
-                            <label for="">Telefone</label>
-                            <input type="text" class="form-control" style="text-transform: uppercase;" name="tel" id="tel" maxlength="40" size="40" 
-                            tabindex="7" autocomplete="off" required>
-                        </div>
-                    </div>
-                </div>
-                <div class="titulo-container">
-                    <div class="texto">
-                        <h6>Endereço</h6>
-                    </div>
-                    <div class="traco">
-                    </div>
-                </div>
-                <div class="container" id="container-empresa">
-                    <div class="row">
-                        <div class="col-3">
-                            <label for="">Cep</label>
-                            <input type="text" class="form-control" style="text-transform: uppercase;" name="cep" id="cep" maxlength="40" size="40" 
-                            tabindex="8" autocomplete="off" required>
-                        </div>
-                    
-                        <div class="col-5">
-                            <label for="">Rua</label>
-                            <input type="text" class="form-control" style="text-transform: uppercase;" name="rua" id="rua" maxlength="40" size="40" 
-                            tabindex="9" autocomplete="off" required>
-                        </div>
-                        <div class="col-1">
-                            <label for="">Número</label>
-                            <input type="text" class="form-control" style="text-transform: uppercase;" name="numero" id="numero" maxlength="40" size="40" 
-                            tabindex="10" autocomplete="off" required>
-                        </div>
-                        <div class="col-3">
-                            <label for="">Bairro</label>
-                            <input type="text" class="form-control" style="text-transform: uppercase;" name="bairro" id="bairro" maxlength="40" size="40" 
-                            tabindex="11" autocomplete="off" required>
+                        <div class="row">
+                            <div class="col-2">
+                                <label for="">Número do CNPJ</label>
+                                <input type="text" class="form-control" style="text-transform: uppercase;" name="numCNPJ" id="numCNPJ" maxlength="40" size="40" 
+                                tabindex="4" autocomplete="off" required>
+                            </div>
+                            <div class="col-3">
+                                <label for="">Segmento Comercial</label>
+                                <input type="text" class="form-control" style="text-transform: uppercase;" name="SegComercial" id="SegComercial" maxlength="40" size="40" 
+                                tabindex="5" autocomplete="off" required>
+                            </div>
+                            <div class="col-4">
+                                <label for="">E-mail Corporativo</label>
+                                <input type="text" class="form-control" style="text-transform: uppercase;" name="emailCorp" id="emailCorp" maxlength="40" size="40" 
+                                tabindex="6" autocomplete="off" required>
+                            </div>
+                            <div class="col-3">
+                                <label for="">Telefone</label>
+                                <input type="text" class="form-control" style="text-transform: uppercase;" name="tel" id="tel" maxlength="40" size="40" 
+                                tabindex="7" autocomplete="off" required>
+                            </div>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-3">
-                            <label for="">Complemento</label>
-                            <input type="text" class="form-control" style="text-transform: uppercase;" name="complemento" id="complemento" maxlength="40" size="40" 
-                            tabindex="12" autocomplete="off" required>
+                    <div class="titulo-container">
+                        <div class="texto">
+                            <h6>Endereço</h6>
                         </div>
-                        <div class="col-4">
-                            <label for="">Cidade</label>
-                            <input type="text" class="form-control" style="text-transform: uppercase;" name="cidade" id="cidade" maxlength="40" size="40" 
-                            tabindex="13" autocomplete="off" required>
-                        </div>
-                        <div class="col-2">
-                            <label for="">Estado</label>
-                            <input type="text" class="form-control" style="text-transform: uppercase;" name="uf" id="uf" maxlength="40" size="40" 
-                            tabindex="14" autocomplete="off" required>
-                        </div>
-                        <div class="col-3">
-                            <label for="">Pais</label>
-                            <input type="text" class="form-control" style="text-transform: uppercase;" name="pais" id="pais" maxlength="40" size="40" 
-                            tabindex="15" autocomplete="off" required>
+                        <div class="traco">
                         </div>
                     </div>
-                </div>
-                <div class="titulo-container">
-                    <div class="texto">
-                        <h6>Gestor da Empresa</h6>
-                    </div>
-                    <div class="traco">
-                    </div>
-                </div>
-                <div class="container" id="container-empresa">
-                    <div class="row">
-                        <div class="col-5">
-                            <label for="">Nome do Gestor</label>
-                            <input type="text" class="form-control" style="text-transform: uppercase;" name="nomeGestor" id="nomeGestor" maxlength="40" size="40" 
-                            tabindex="16" autocomplete="off" required>
+                    <div class="container" id="container-empresa">
+                        <div class="row">
+                            <div class="col-3">
+                                <label for="">Cep</label>
+                                <input type="text" class="form-control cep-mask" style="text-transform: uppercase;" name="cep" id="cep" maxlength="40" size="40" 
+                                tabindex="8" autocomplete="off" onblur="pesquisacep(this.value);" required>
+                            </div>
+                        
+                            <div class="col-5">
+                                <label for="">Rua</label>
+                                <input type="text" class="form-control" style="text-transform: uppercase;" name="rua" id="rua" maxlength="40" size="40" 
+                                tabindex="9" autocomplete="off" required>
+                            </div>
+                            <div class="col-1">
+                                <label for="">Número</label>
+                                <input type="text" class="form-control" style="text-transform: uppercase;" name="numero" id="numero" maxlength="40" size="40" 
+                                tabindex="10" autocomplete="off" required>
+                            </div>
+                            <div class="col-3">
+                                <label for="">Bairro</label>
+                                <input type="text" class="form-control" style="text-transform: uppercase;" name="bairro" id="bairro" maxlength="40" size="40" 
+                                tabindex="11" autocomplete="off" required>
+                            </div>
                         </div>
-                    
-                        <div class="col-4">
-                            <label for="">CPF</label>
-                            <input type="text" class="form-control" style="text-transform: uppercase;" name="cpfGestor" id="cpfGestor" maxlength="40" size="40" 
-                            tabindex="17" autocomplete="off" required>
-                        </div>
-                        <div class="col-3">
-                            <label for="">Telefone</label>
-                            <input type="text" class="form-control" style="text-transform: uppercase;" name="telGestor" id="telGestor" maxlength="40" size="40" 
-                            tabindex="18" autocomplete="off" required>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-4">
-                            <label for="">E-mail</label>
-                            <input type="text" class="form-control" style="text-transform: uppercase;" name="emailGestor" id="emailGestor" maxlength="40" size="40" 
-                            tabindex="19" autocomplete="off" required>
-                        </div>
-                        <div class="col-3">
-                            <label for="">Usuário</label>
-                            <input type="text" class="form-control" style="text-transform: uppercase;" name="userGestor" id="userGestor" maxlength="40" size="40" 
-                            tabindex="20" autocomplete="off" required>
-                        </div>
-                        <div class="col-2">
-                            <label for="">Senha</label>
-                            <input type="password" class="form-control" style="text-transform: uppercase;" name="pssd" id="pssd" maxlength="40" size="40" 
-                            tabindex="21" autocomplete="off" required>
-                        </div>
-                        <div class="col-2">
-                            <label for="">Confrima Senha</label>
-                            <input type="password" class="form-control" style="text-transform: uppercase;" name="pssdConfirm" id="pssdConfirm" maxlength="40" size="40" 
-                            tabindex="21" autocomplete="off" required>
-                        </div>
-                        <div class="col-1">
-                            <label for="">VerSenha</label>
-                            <input type="radio" class="" style="text-transform: uppercase;" name="pssdConfirm" id="pssdConfirm" maxlength="40" size="40" 
-                            tabindex="21" autocomplete="off" required>
+                        <div class="row">
+                            <div class="col-3">
+                                <label for="">Complemento</label>
+                                <input type="text" class="form-control" style="text-transform: uppercase;" name="complemento" id="complemento" maxlength="40" size="40" 
+                                tabindex="12" autocomplete="off">
+                            </div>
+                            <div class="col-4">
+                                <label for="">Cidade</label>
+                                <input type="text" class="form-control" style="text-transform: uppercase;" name="cidade" id="cidade" maxlength="40" size="40" 
+                                tabindex="13" autocomplete="off" required>
+                            </div>
+                            <div class="col-2">
+                                <label for="">Estado</label>
+                                <input type="text" class="form-control" style="text-transform: uppercase;" name="uf" id="uf" maxlength="40" size="40" 
+                                tabindex="14" autocomplete="off" required>
+                            </div>
+                            <div class="col-3">
+                                <label for="">Pais</label>
+                                <input type="text" class="form-control" style="text-transform: uppercase;" name="pais" id="pais" maxlength="40" size="40" 
+                                tabindex="15" autocomplete="off" required>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="btn-position">
-                    <input type="submit" class="btn" id="btnGravar" value="Cadastrar Empresa" tabindex="22">
-                </div>
-            </form>
+                    <div class="titulo-container">
+                        <div class="texto">
+                            <h6>Gestor da Empresa</h6>
+                        </div>
+                        <div class="traco">
+                        </div>
+                    </div>
+                    <div class="container" id="container-empresa">
+                        <div class="row">
+                            <div class="col-5">
+                                <label for="">Nome do Gestor</label>
+                                <input type="text" class="form-control" style="text-transform: uppercase;" name="nomeGestor" id="nomeGestor" maxlength="40" size="40" 
+                                tabindex="16" autocomplete="off" required>
+                            </div>
+                        
+                            <div class="col-4">
+                                <label for="">CPF</label>
+                                <input type="text" class="form-control" style="text-transform: uppercase;" name="cpfGestor" id="cpfGestor" maxlength="40" size="40" 
+                                tabindex="17" autocomplete="off" required>
+                            </div>
+                            <div class="col-3">
+                                <label for="">Telefone</label>
+                                <input type="text" class="form-control" style="text-transform: uppercase;" name="telGestor" id="telGestor" maxlength="40" size="40" 
+                                tabindex="18" autocomplete="off" required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-4">
+                                <label for="">E-mail</label>
+                                <input type="text" class="form-control" style="text-transform: uppercase;" name="emailGestor" id="emailGestor" maxlength="40" size="40" 
+                                tabindex="19" autocomplete="off" required>
+                            </div>
+                            <div class="col-3">
+                                <label for="">Usuário</label>
+                                <input type="text" class="form-control" style="text-transform: uppercase;" name="userGestor" id="userGestor" maxlength="40" size="40" 
+                                tabindex="20" autocomplete="off" required>
+                            </div>
+                            <div class="col-2">
+                                <label for="">Senha</label>
+                                <input type="password" class="form-control" style="text-transform: uppercase;" name="pssd" id="pssd" maxlength="40" size="40" 
+                                tabindex="21" autocomplete="off" required>
+                            </div>
+                            <div class="col-2">
+                                <label for="">Confrima Senha</label>
+                                <input type="password" class="form-control" style="text-transform: uppercase;" name="pssdConfirm" id="pssdConfirm" maxlength="40" size="40" 
+                                tabindex="21" autocomplete="off" required>
+                            </div>
+                            <div class="col-1">
+                                <label for="">VerSenha</label>
+                                <input type="radio" class="" style="text-transform: uppercase;" name="pssdConfirm" id="pssdConfirm" maxlength="40" size="40" 
+                                tabindex="21" autocomplete="off" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="btn-position">
+                        <input type="submit" class="btn" id="btnGravar" value="Cadastrar Empresa" tabindex="22">
+                        <input type="text" size="15" maxlength="20" name="cpf" id="cpf">
+                    </div>
+                </form>
+            </div>
         </div>
-    </div>
-</main>
+    </main>
+
+    <script>
+        $('#cep').keyup(function(e){
+            if (/\D/g.test(this.value)){
+                // filtro para digitar apenas números
+                this.value = this.value.replace(/\D/g, '');
+            }
+        });
+    </script>
+
+    <script>
+    
+        function limpa_formulário_cep() {
+                //Limpa valores do formulário de cep.
+                document.getElementById('rua').value=("");
+                document.getElementById('bairro').value=("");
+                document.getElementById('cidade').value=("");
+                document.getElementById('uf').value=("");
+        }
+    
+        function meu_callback(conteudo) {
+            if (!("erro" in conteudo)) {
+                //Atualiza os campos com os valores.
+                console.log(conteudo);
+                document.getElementById('rua').value=(conteudo.logradouro);
+                document.getElementById('bairro').value=(conteudo.bairro);
+                document.getElementById('cidade').value=(conteudo.localidade);
+                document.getElementById('uf').value=(conteudo.uf);
+            }
+            else {
+                //CEP não Encontrado.
+                limpa_formulário_cep();
+                alert("CEP não encontrado.");
+            }
+        }
+            
+        function pesquisacep(valor) {
+    
+            var cep = valor.replace(/\D/g, '');
+    
+            if (cep != "") {
+    
+                //Expressão regular para validar o CEP.
+                var validacep = /^[0-9]{8}$/;
+    
+                //Valida o formato do CEP.
+                if(validacep.test(cep)) {
+    
+                    //Preenche os campos com "..." enquanto consulta webservice.
+                    document.getElementById('rua').value="...";
+                    document.getElementById('bairro').value="...";
+                    document.getElementById('cidade').value="...";
+                    document.getElementById('uf').value="...";
+    
+                    //Cria um elemento javascript.
+                    var script = document.createElement('script');
+    
+                    //Sincroniza com o callback.
+                    script.src = 'https://viacep.com.br/ws/'+ cep + '/json/?callback=meu_callback';
+    
+                    //Insere script no documento e carrega o conteúdo.
+                    document.body.appendChild(script);
+    
+                }
+                else {
+                    //cep é inválido.
+                    limpa_formulário_cep();
+                    alert("Formato de CEP inválido.");
+                }
+            }
+            else {
+                //cep sem valor, limpa formulário.
+                limpa_formulário_cep();
+            }
+        };
+    
+        </script>
+
 {% endblock %}
